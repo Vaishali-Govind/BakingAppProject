@@ -210,7 +210,7 @@ public class DetailActivity extends AppCompatActivity {
 
             MediaSource mediaSource = buildMediaSource();
 
-            mActivityViewModelDetail.setPlayWhenReady(true);
+//             mActivityViewModelDetail.setPlayWhenReady(true);
 
             /** TODO
              * Dynamically create constraints depending upon the whether the video is there or not!
@@ -331,7 +331,7 @@ public class DetailActivity extends AppCompatActivity {
         if (mPlayerExo != null) {
 
             mActivityViewModelDetail.setPlayBackPosition(mPlayerExo.getCurrentPosition());
-            mActivityViewModelDetail.setPlayWhenReady(false);
+          mActivityViewModelDetail.setPlayWhenReady(mPlayerExo.getPlayWhenReady());
             mActivityViewModelDetail.setWindowIndex(mPlayerExo.getCurrentWindowIndex());
 
             mActivityViewModelDetail.setmStepPositionPrevious( mActivityViewModelDetail.getmStepPositionPrevious());
